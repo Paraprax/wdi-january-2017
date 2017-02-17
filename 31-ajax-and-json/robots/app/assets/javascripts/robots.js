@@ -21,9 +21,17 @@ $(function() {
 			// .html only works with HTML data, not JSON
 			//$('#robot-details').html(data);
 			
-			var profile_pic_src = 'http://robohash.org/' + data.address
-			$('<img>').attr('src', profile_pic_src).appendTo('#robot-details');
+			var profilePicSrc = 'http://robohash.org/' + data.address
+			$('<img>').attr('src', profilePicSrc).appendTo('#robot-details');
 			
+			// What I want to append is:
+			// <p>Price: <strong>$123.45</strong></p>
+			
+			var priceString = '$' + (data.model_number / 100);
+			var strongTag   = $('<strong>').html(priceString);
+			var pTag        = $('<p>').html('Price: ').append(strongTag);
+			
+			pTag.appendTo('#robot-details');
 		});
 		
 	});
