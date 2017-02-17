@@ -17,7 +17,13 @@ $(function() {
 			dataType: 'json'
 		}).done(function(data) {
 			// Step 4: Update the page
-			$('#robot-details').html(data);
+			
+			// .html only works with HTML data, not JSON
+			//$('#robot-details').html(data);
+			
+			var profile_pic_src = 'http://robohash.org/' + data.address
+			$('<img>').attr('src', profile_pic_src).appendTo('#robot-details');
+			
 		});
 		
 	});
