@@ -5,6 +5,7 @@
 <ul id="greeting-list">
 
   <% @greetings.each do |greeting| %>
+    <%#= render 'greeting', g: greeting %>
     <li><%= greeting.note %></li>
   <% end %>
 
