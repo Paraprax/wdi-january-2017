@@ -1,0 +1,10 @@
+<h1><%= @user.full_name %></h1>
+<h2>Your Pledges</h2>
+<ul>
+  <% @user.pledges.each do |pledge| %>
+    <li>
+      <p>Project: <%= pledge.project.title %></p>
+      <p>Reward: <%= pledge.reward.description %></p>
+    </li>
+  <% end %>
+</ul>
