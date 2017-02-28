@@ -1,0 +1,2 @@
+module RaptorsHelper
+end
