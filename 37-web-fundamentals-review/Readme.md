@@ -4,9 +4,8 @@
 1. Client/server architecture and request/response cycle
 2. MVC architecture & where code should go
 3. Debugging in Rails
-4. Common Rails errors
-5. Exploring a new (old) Rails app
-6. Adding a new feature to a legacy app
+4. Exploring a new (old) Rails app
+5. Adding a new feature to a legacy app
 
 ### Client-server architecture
 ![Client-server architecture](http://bramus.github.io/ws1-sws-course-materials/assets/02/client-server-model.png)
