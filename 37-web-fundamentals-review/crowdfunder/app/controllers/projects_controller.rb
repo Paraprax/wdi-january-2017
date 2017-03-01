@@ -1,6 +1,10 @@
 class ProjectsController < ApplicationController
   before_action :require_login, only: [:new, :create]
 
+  def show
+    @project = Project.find(params[:id])
+  end
+
   def index
     @projects = Project.all
     @projects = @projects.order(:end_date)
